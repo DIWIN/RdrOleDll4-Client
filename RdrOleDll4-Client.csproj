@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>RdrOleDll4_Client</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="RdrOle4-ReaderServer-DeReg-V1.reg" />
+    <None Remove="RdrOle4-ReaderServer-DeReg-V2.reg" />
+    <None Remove="RdrOle4-ReaderServer-Reg-V2.reg" />
+    <None Remove="RdrOle4-ReaderServer1.reg" />
+    <None Remove="RdrOle4-ReaderServer2.reg" />
+    <None Remove="RdrOle4-ReaderServer3.reg" />
+    <None Remove="RdrOle4-ReaderServer4.reg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <COMReference Include="RdrOleDll4">
+      <WrapperTool>tlbimp</WrapperTool>
+      <VersionMinor>0</VersionMinor>
+      <VersionMajor>1</VersionMajor>
+      <Guid>79000b66-6c2a-11d3-b3e2-0060973dcd18</Guid>
+      <Lcid>0</Lcid>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+
+</Project>
